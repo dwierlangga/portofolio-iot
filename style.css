@@ -1,0 +1,160 @@
+:root {
+  --primary: #4a90e2;
+  --dark: #2d3436;
+  --light-bg: #f9f9f9;
+  --text: #636e72;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--dark);
+  background: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+nav {
+  padding: 2rem 0 1rem; /* Memberi ruang untuk garis di bawah */
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  /* Membuat garis bawah dengan gradien */
+  border-bottom: 2px solid;
+  border-image: linear-gradient(
+      to right,
+      transparent,
+      var(--primary),
+      transparent
+    )
+    1;
+}
+
+.nav-wrapper {
+  display: flex;
+  flex-direction: column; /* Menumpuk Nama dan Menu secara vertikal */
+  align-items: center; /* Membuat semuanya rata tengah secara horizontal */
+  gap: 1rem; /* Jarak antara nama dan menu */
+}
+
+.logo {
+  font-weight: 700;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.links {
+  display: flex;
+  gap: 2rem; /* Jarak antar pilihan menu */
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: var(--primary);
+}
+
+.hero {
+  padding: 6rem 0 3rem;
+}
+.badge {
+  background: #e1f0ff;
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 1.2rem 0;
+  color: var(--dark);
+}
+.highlight {
+  color: var(--primary);
+}
+
+.section-title {
+  margin: 4rem 0 2rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--light-bg);
+  padding-bottom: 10px;
+}
+
+.work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.company {
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+.year {
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+ul {
+  margin-left: 1.2rem;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+.skill-group h4 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+.skill-group p {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+footer {
+  padding: 4rem 0 2rem;
+  text-align: center;
+  border-top: 1px solid var(--light-bg);
+  margin-top: 4rem;
+  color: var(--text);
+  font-size: 0.8rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
