@@ -3,140 +3,322 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dwi Erlangga | Portfolio</title>
+    <title>Muhammad Dwi Erlangga | IoT & Robotics Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio Muhammad Dwi Erlangga – Spesialis IoT, Embedded System, dan Robotika. Berpengalaman dalam firmware C++, Flutter, MQTT, dan integrasi hardware."
+    />
+    <meta
+      property="og:title"
+      content="Muhammad Dwi Erlangga | IoT & Robotics Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio IoT & Robotics Engineer dengan pengalaman di embedded system, firmware, dan kompetisi robotik."
+    />
+    <meta property="og:type" content="website" />
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <!-- Font Awesome (untuk icon brand: GitHub, LinkedIn) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   </head>
   <body>
-    <nav>
+    <!-- NAVIGATION -->
+    <nav id="navbar">
       <div class="container nav-wrapper">
         <a href="#" class="logo">DWI<span>ERLANGGA</span></a>
-        <div class="links">
+        <div class="links" id="nav-links">
           <a href="#about">Tentang</a>
           <a href="#work">Pengalaman</a>
           <a href="#skills">Keahlian</a>
+          <a href="#contact" class="btn-nav">Kontak</a>
         </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </nav>
 
+    <!-- HERO -->
     <header class="hero" id="about">
-      <div class="container">
-        <span class="badge">Lulusan S1 Ilmu Komputer (IPK 3.76)</span>
-        <h1>
-          Membangun solusi melalui
-          <span class="highlight">IoT & Robotika.</span>
-        </h1>
-        <p>
-          Spesialis dalam perakitan hardware, firmware programming (C++), dan
-          integrasi IoT. Berpengalaman dalam manajemen lab dan pendampingan
-          lomba teknologi.
-        </p>
+      <div class="hero-bg-anim">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <span class="badge">
+            <i data-lucide="graduation-cap" class="badge-icon"></i>
+            Lulusan S1 Ilmu Komputer · IPK 3.76 &nbsp;·&nbsp; 📍 Bogor,
+            Indonesia
+          </span>
+          <h1>
+            Membangun solusi melalui<br />
+            <span class="highlight typed-text" id="typed"></span
+            ><span class="cursor">|</span>
+          </h1>
+          <p class="hero-desc">
+            Spesialis dalam perakitan hardware, firmware programming (C++), dan
+            integrasi IoT. Berpengalaman dalam manajemen lab dan pendampingan
+            lomba teknologi nasional.
+          </p>
+          <div class="hero-cta">
+            <a href="#work" class="btn-primary">
+              <i data-lucide="briefcase"></i> Lihat Pengalaman
+            </a>
+            <a href="#contact" class="btn-outline">
+              <i data-lucide="send"></i> Hubungi Saya
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="mailto:erlanggadwi981@gmail.com" aria-label="Email" class="social-btn" title="Email">
+              <i data-lucide="mail"></i>
+            </a>
+            <a href="tel:083872503123" aria-label="Phone" class="social-btn" title="0838-7250-3123">
+              <i data-lucide="phone"></i>
+            </a>
+            <a href="https://linkedin.com/in/dwierlangga" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-btn" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/dwierlangga" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="avatar-ring">
+            <div class="avatar-placeholder">
+              <i data-lucide="cpu"></i>
+            </div>
+          </div>
+          <div class="floating-chip chip-1"><i data-lucide="wifi"></i> IoT</div>
+          <div class="floating-chip chip-2"><i data-lucide="zap"></i> C++</div>
+          <div class="floating-chip chip-3">
+            <i data-lucide="bot"></i> Robotics
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <i data-lucide="chevrons-down"></i>
       </div>
     </header>
 
-    <section id="work" class="container">
-      <h2 class="section-title">Riwayat Pengalaman</h2>
-      <div class="work-list">
-        <div class="work-item">
-          <span class="year">Juli 2025 - Sekarang</span>
-          <h3>Teknisi Robotik</h3>
-          <p class="company">IDN Boarding School, Bogor</p>
-          <ul>
-            <li>
-              Testing, perawatan alat, serta perakitan hardware (wiring,
-              soldering, firmware).
-            </li>
-            <li>Pendampingan siswa dalam kompetisi Robotik & IoT.</li>
-            <li>
-              Memastikan sistem berfungsi optimal untuk kegiatan belajar
-              mengajar.
-            </li>
-          </ul>
+    <!-- EXPERIENCE -->
+    <section id="work" class="container section">
+      <div class="section-header fade-in">
+        <span class="section-tag">Career</span>
+        <h2 class="section-title">Riwayat Pengalaman</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="work-card">
+            <div class="work-card-header">
+              <div>
+                <span class="year">Juli 2025 – Sekarang</span>
+                <h3>Teknisi Robotik</h3>
+                <p class="company">
+                  <i data-lucide="map-pin"></i> IDN Boarding School, Bogor
+                </p>
+              </div>
+              <span class="status-badge active">Aktif</span>
+            </div>
+            <ul>
+              <li>Melakukan testing, perawatan alat, serta perakitan hardware robotik (wiring, soldering, firmware).</li>
+              <li>Menyiapkan dan mendampingi siswa dalam lomba-lomba Robotik &amp; IoT.</li>
+              <li>Memastikan seluruh perangkat dan sistem robotik siap pakai dan berfungsi optimal sebelum digunakan.</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="work-item">
-          <span class="year">Mei 2025 - Juli 2025</span>
-          <h3>Guru IT Robotik & IoT</h3>
-          <p class="company">IDN Boarding School, Bogor</p>
-          <ul>
-            <li>
-              Mengajar dan mengembangkan modul pembelajaran Robotik & IoT.
-            </li>
-            <li>Membimbing siswa dalam pembuatan proyek akhir materi.</li>
-          </ul>
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="work-card">
+            <div class="work-card-header">
+              <div>
+                <span class="year">Mei 2025 – Juli 2025</span>
+                <h3>Guru IT Robotik &amp; IoT</h3>
+                <p class="company">
+                  <i data-lucide="map-pin"></i> IDN Boarding School, Bogor
+                </p>
+              </div>
+            </div>
+            <ul>
+              <li>Mengajar dan membimbing siswa dalam bidang Robotik dan IoT.</li>
+              <li>Mengembangkan modul pembelajaran siswa.</li>
+              <li>Melakukan pendampingan terkait pembuatan projek materi siswa.</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="work-item">
-          <span class="year">Januari 2023 - Mei 2025</span>
-          <h3>Freelance Embedded System & IoT Developer</h3>
-          <p class="company">Bogor, Indonesia</p>
-          <ul>
-            <li>Merancang sistem elektronika berbasis mikrokontroler.</li>
-            <li>
-              Integrasi sistem dengan IoT untuk monitoring dan kontroling jarak
-              jauh.
-            </li>
-          </ul>
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="work-card">
+            <div class="work-card-header">
+              <div>
+                <span class="year">Januari 2023 – Mei 2025</span>
+                <h3>Freelance Embedded System &amp; IoT Developer</h3>
+                <p class="company">
+                  <i data-lucide="map-pin"></i> Bogor, Indonesia
+                </p>
+              </div>
+            </div>
+            <ul>
+              <li>Merancang dan mengembangkan sistem elektronika berbasis mikrokontroler.</li>
+              <li>Mengintegrasikan sistem dengan IoT untuk monitoring dan kontroling.</li>
+              <li>Melakukan evaluasi sistem untuk meningkatkan performa.</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="work-item">
-          <span class="year">Februari 2021 - Juni 2024</span>
-          <h3>Asisten Pengajar Praktikum</h3>
-          <p class="company">Laboratorium Workshop Universitas Pakuan</p>
-          <ul>
-            <li>
-              Koordinator asisten untuk mengelola kegiatan lab dan anggota.
-            </li>
-            <li>
-              Mengajar praktikum: Sistem Digital, Embedded System, IoT, dan
-              Robotika.
-            </li>
-            <li>
-              Mengembangkan berbagai prototipe robot berbasis mikrokontroler.
-            </li>
-          </ul>
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="work-card">
+            <div class="work-card-header">
+              <div>
+                <span class="year">Februari 2021 – Juni 2024</span>
+                <h3>Asisten Pengajar Praktikum</h3>
+                <p class="company">
+                  <i data-lucide="map-pin"></i> Laboratorium Workshop
+                  Universitas Pakuan
+                </p>
+              </div>
+            </div>
+            <ul>
+              <li>Menjadi koordinator asisten dalam mengkoordinasikan segala kegiatan anggota asisten dan melaporkannya kepada kepala laboratorium.</li>
+              <li>Mengajar praktikum: Sistem Instrumentasi, Sistem Digital, Embedded System, Internet of Things, Robotika.</li>
+              <li>Mengembangkan robot dan sistem berbasis mikrokontroler.</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="work-item">
-          <span class="year">September 2022 - Desember 2022</span>
-          <h3>Hardware Developer (MBKM)</h3>
-          <p class="company">Kuningan, Indonesia</p>
-          <ul>
-            <li>
-              Membangun sistem monitoring suhu kandang Lebah Madu Teuweul
-              berbasis IoT.
-            </li>
-            <li>Melakukan penyuluhan teknologi kepada peternak lokal.</li>
-          </ul>
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="work-card">
+            <div class="work-card-header">
+              <div>
+                <span class="year">September 2022 – Desember 2022</span>
+                <h3>Hardware Developer (MBKM)</h3>
+                <p class="company">
+                  <i data-lucide="map-pin"></i> Kuningan, Indonesia
+                </p>
+              </div>
+            </div>
+            <ul>
+              <li>Mengembangkan teknologi monitoring suhu pada kandang Lebah Madu Teuweul dengan berbasis Internet of Things.</li>
+              <li>Melakukan penyuluhan sistem tersebut kepada peternak.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="container">
-      <h2 class="section-title">Keahlian Teknis</h2>
-      <div class="skill-grid">
-        <div class="skill-group">
-          <h4>Languages</h4>
-          <p>Arduino, C++, Flutter, PHP</p>
-        </div>
-        <div class="skill-group">
-          <h4>Systems</h4>
-          <p>MQTT, REST API, UART, SPI, I2C</p>
-        </div>
-        <div class="skill-group">
-          <h4>Tools</h4>
-          <p>VS Code, Fritzing, Figma, XAMPP</p>
-        </div>
-      </div>
-    </section>
-
-    <footer id="contact">
+    <!-- SKILLS -->
+    <section id="skills" class="skills-section section">
       <div class="container">
-        <p>Contact: erlanggadwi981@gmail.com</p>
-        <p>&copy; 2026 Muhammad Dwi Erlangga.</p>
+        <div class="section-header fade-in">
+          <span class="section-tag">Expertise</span>
+          <h2 class="section-title">Keahlian Teknis</h2>
+        </div>
+        <div class="skill-grid">
+
+          <div class="skill-card fade-in">
+            <div class="skill-icon"><i data-lucide="code-2"></i></div>
+            <h4>Software / Programming</h4>
+            <div class="skill-pills">
+              <span>C/C++</span>
+              <span>Arduino Language</span>
+              <span>Flutter</span>
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+          </div>
+
+          <div class="skill-card fade-in">
+            <div class="skill-icon"><i data-lucide="cpu"></i></div>
+            <h4>Hardware / Mikrokontroler</h4>
+            <div class="skill-pills">
+              <span>Arduino</span>
+              <span>ESP32</span>
+              <span>STM32</span>
+              <span>Wiring</span>
+              <span>Soldering</span>
+            </div>
+          </div>
+
+          <div class="skill-card fade-in">
+            <div class="skill-icon"><i data-lucide="network"></i></div>
+            <h4>Protokol &amp; IoT</h4>
+            <div class="skill-pills">
+              <span>MQTT</span>
+              <span>UART</span>
+              <span>SPI</span>
+              <span>I2C</span>
+            </div>
+          </div>
+
+          <div class="skill-card fade-in">
+            <div class="skill-icon"><i data-lucide="wrench"></i></div>
+            <h4>Tools</h4>
+            <div class="skill-pills">
+              <span>VS Code</span>
+              <span>Arduino IDE</span>
+              <span>STM32Cube</span>
+              <span>Fritzing</span>
+              <span>Figma</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER -->
+    <footer id="contact">
+      <div class="container footer-content">
+        <div class="footer-cta fade-in">
+          <h2>Mari Berkolaborasi</h2>
+          <p>
+            Terbuka untuk peluang kerja, proyek freelance, atau sekadar diskusi
+            teknologi!
+          </p>
+          <div class="footer-btn-group">
+            <a href="mailto:erlanggadwi981@gmail.com" class="btn-primary">
+              <i data-lucide="send"></i> erlanggadwi981@gmail.com
+            </a>
+            <a href="tel:083872503123" class="btn-outline">
+              <i data-lucide="phone"></i> 0838-7250-3123
+            </a>
+          </div>
+        </div>
+        <div class="footer-social">
+          <a href="mailto:erlanggadwi981@gmail.com" aria-label="Email" class="social-btn" title="Email">
+            <i data-lucide="mail"></i>
+          </a>
+          <a href="tel:083872503123" aria-label="Telepon" class="social-btn" title="0838-7250-3123">
+            <i data-lucide="phone"></i>
+          </a>
+          <a href="https://linkedin.com/in/dwierlangga" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-btn" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/dwierlangga" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <p class="footer-copy">
+          <i
+            data-lucide="map-pin"
+            style="width: 13px; height: 13px; vertical-align: middle"
+          ></i>
+          Bogor, Indonesia &nbsp;·&nbsp; &copy; 2026 Muhammad Dwi Erlangga
+        </p>
       </div>
     </footer>
 
